@@ -127,8 +127,7 @@ export default function AddFileButton({ currentFolder }) {
                   <ProgressBar
                     animated={!file.error}
                     variant={file.error ? "danger" : "primary"}
-                    
-                  //Tetst comment
+                    now={file.error ? 100 : file.progress * 100}
                     label={
                       file.error
                         ? "Error"
