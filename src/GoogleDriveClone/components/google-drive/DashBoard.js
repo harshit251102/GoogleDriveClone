@@ -8,6 +8,7 @@ import File from "./File"
 import Navbar from "./Navbar"
 import FolderBreadcrumbs from "./FolderBreadcrumbs"
 import { useParams, useLocation } from "react-router-dom"
+import styles from './RocketCard.module.css';
 
 export default function Dashboard() {
   const {folderId}  = useParams();
@@ -18,7 +19,7 @@ export default function Dashboard() {
   return (
     <>
       <Navbar />
-      <Container fluid style={{background: "light-yellow"}}>
+      <Container fluid>
         <div className="d-flex align-items-center">
           <FolderBreadcrumbs currentFolder={folder} />
           <AddFileButton currentFolder={folder}/>
